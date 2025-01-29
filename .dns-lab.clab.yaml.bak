@@ -12,9 +12,6 @@ topology:
     client:
       image: ubuntu:latest
       kind: linux
-      binds:
-        - ./bind:/etc/bind # Montar volume para configuração do BINDsudo containerlab destroy -t dns-lab.clab.yaml
-
       exec:
         - apt update
         - apt install -y dnsutils iputils-ping iproute2 # Instalar ferramentas DNS no cliente
